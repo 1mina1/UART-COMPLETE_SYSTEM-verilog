@@ -37,8 +37,8 @@ this is the complete multi clock domain uart system done using low power techniq
 # Bit synchronizer
 -used to pass the data from clock domain to another<br />
 # Notes
--the uart system have the following commands :
-1-0xAA for register writing and here the receiver waits for another 2 frames to get the address and the data
-2-0xBB for register Reading and here the receiver waits for another frame to get the address and wil send the data after processing
-3-0xCC for writing OperA and OperB and do an ALU operation then send the data
-4-0xDD for preforming ALU operation on previous operands of ALU
+-the uart system have the following commands :<br />
+1-0xAA for register writing and here the receiver waits for another 2 frames to get the address and the data<br />
+2-0xBB for register Reading and here the receiver waits for another frame to get the address and wil send the data after processing<br />
+3-0xCC for writing OperA and OperB and do an ALU operation then send the data<br />
+4-0xDD for preforming ALU operation on previous operands of ALU<br />
