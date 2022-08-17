@@ -34,22 +34,7 @@ module TX_Controller (
   output   reg               TXCont_Data_Valid,
   output   reg               TXCont_CLK_Div_en
   );
-  /////////buffering input data and address for one cycle////////////
-  reg    [7:0]     TXCont_Pdata_c;
-  reg    [7:0]     TXCont_Addr_c;
-  always@(posedge TXCont_CLK or negedge TXCont_RST)
-  begin
-    if(!TXCont_RST)
-      begin
-        TXCont_Pdata_c <= 8'b0;
-        TXCont_Addr_c <= 8'b0;
-      end
-    else
-      begin
-        TXCont_Pdata_c <= TXCont_Pdata;
-        TXCont_Addr_c <= TXCont_Addr;
-      end
-  end
+  
   
   /////////defining the states////////
   
@@ -63,17 +48,21 @@ module TX_Controller (
   Using_ALU             = 3'b100,
   Busy_State            = 3'b101,
   Send_MS_Byte          = 3'b111;
-  //////////saving the function ////////////////////////////////////
-  reg     [3:0]    Function;
+  
+  /////////buffering input data and address////////////
+  reg    [7:0]     TXCont_Pdata_c;
+  reg    [7:0]     TXCont_Addr_c;
   always@(posedge TXCont_CLK or negedge TXCont_RST)
   begin
     if(!TXCont_RST)
       begin
-        Function <= 4'b0;
+        TXCont_Pdata_c <= 8'b0;
+        TXCont_Addr_c <= 8'b0;
       end
-    else if(TXCont_command == Using_ALU)
+    else if(TXCont_command != IDLE)
       begin
-        Function <= TXCont_Pdata[3:0];
+        TXCont_Pdata_c <= TXCont_Pdata;
+        TXCont_Addr_c <= TXCont_Addr;
       end
   end
   /////////////////////state transition///////////////////
@@ -98,7 +87,7 @@ module TX_Controller (
                                 Next_State = IDLE;
                                end
       Read_Data             :  begin
-                                if(TXCont_RF_Valid)
+                                if(TXCont_RF_Valid && TXCont_Busy)
                                   begin
                                     Next_State = IDLE;
                                   end
@@ -208,7 +197,7 @@ module TX_Controller (
                                 TXCont_Addr_Out = 8'b0;
                                 TXCont_TXPdata_Out = 8'b0;
                                 TXCont_RFWr_Data = 8'b0;
-                                TXCont_ALU_Fun = Function;
+                                TXCont_ALU_Fun = TXCont_Pdata_c[3:0];
                                 TXCont_ALU_en = 1'b1;
                                 TXCont_CLK_en = 1'b1;
                                 TXCont_Rd_en = 1'b0;
@@ -253,7 +242,3 @@ module TX_Controller (
     endcase
   end
 endmodule
-  
-  
-  
-  
