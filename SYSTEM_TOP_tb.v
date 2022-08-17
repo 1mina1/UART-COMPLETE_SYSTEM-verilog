@@ -27,7 +27,9 @@ module SYSTEM_TOP_tb ();
   parameter UART_CLK_PER = 100;
   parameter ALU_W_OP_NUM_OF_FRAMES = 4 ;
   parameter RF_Wr_CMD_NUK_OF_FRAMES =3;
+  parameter RF_Rd_CMD_NUK_OF_FRAMES =2;
   reg   [RF_Wr_CMD_NUK_OF_FRAMES*10-1:0]  RF_Wr_CMD    = 'b1_0_00111_11_0_1_00000010_0_1_10101010_0;
+  reg   [RF_Rd_CMD_NUK_OF_FRAMES*11-1:0]  RF_Rd_CMD    = 'b10_00000010_0_11_10111011_0;
   reg   [ALU_W_OP_NUM_OF_FRAMES*11-1:0]   ALU_W_OP_CMD = 'b10_00000001_0_11_00000011_0_11_00000101_0_11_11001100_0 ;
   ////////////////// initial block /////////////////////////
   initial
