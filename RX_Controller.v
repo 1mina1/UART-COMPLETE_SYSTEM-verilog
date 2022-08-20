@@ -74,7 +74,7 @@ module RX_Controller (
   begin
     if(!RXCont_RST)
       count <= 1'b0;
-    if(count_en)
+    else if(count_en)
     begin   
      if(RXCont_Data_Valid)
        begin
