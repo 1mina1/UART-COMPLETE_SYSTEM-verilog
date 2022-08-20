@@ -129,6 +129,9 @@ module TX_Controller (
                                    Next_State = Send_MS_Byte;
                                  end
                                end
+      default              :  begin
+                               Next_State = IDLE;
+                              end
     endcase
   end
  //////////////////output logic///////////////////
@@ -239,6 +242,22 @@ module TX_Controller (
                                 TXCont_Data_Valid = 1'b1;
                                 TXCont_CLK_Div_en =1'b1;
                               end
+      default              :  begin
+                                TXCont_Addr_Out = 8'b0;
+                                TXCont_TXPdata_Out = 8'b0;
+                                TXCont_RFWr_Data = 8'b0;
+                                TXCont_ALU_Fun = 4'b0;
+                                TXCont_ALU_en = 1'b0;
+                                TXCont_CLK_en = 1'b0;
+                                TXCont_Rd_en = 1'b0;
+                                TXCont_Wr_en = 1'b0;
+                                TXCont_Data_Valid = 1'b0;
+                                TXCont_CLK_Div_en =1'b1;
+                              end
     endcase
   end
 endmodule
+  
+  
+  
+  
