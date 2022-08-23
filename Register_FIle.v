@@ -33,6 +33,7 @@ module Register_File #(parameter WIDTH = 8 , DEPTH = 16) (
   begin
     if(!RF_RST)
       begin
+        RF_RdData <= 'b0;
         RF_Rd_Data_Valid <= 1'b0;
         for(i = 0;i<DEPTH;i=i+1)
         begin
