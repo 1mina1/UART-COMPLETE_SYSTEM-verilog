@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : clocks
+Design : SYSTEM_TOP
+Version: K-2015.06
+Date   : Tue Aug 23 04:02:20 2022
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+ALU_CLK         20.00   {0 10}              G         {U0_CLK_GATE/GATED_CLK}
+CLK_REF         20.00   {0 10}                        {REF_CLK}
+CLK_UART      1085.07   {0 542.535}                   {UART_CLK}
+TX_CLK        8680.56   {0 4340.28}         G         {U0_ClkDiv/o_div_clk}
+--------------------------------------------------------------------------------
+
+Generated     Master         Generated      Master         Waveform
+Clock         Source         Source         Clock          Modification
+--------------------------------------------------------------------------------
+ALU_CLK       REF_CLK        {U0_CLK_GATE/GATED_CLK}
+                                            CLK_REF        divide_by(1)
+TX_CLK        UART_CLK       {U0_ClkDiv/o_div_clk}
+                                            CLK_UART       divide_by(8)
+--------------------------------------------------------------------------------
+1
