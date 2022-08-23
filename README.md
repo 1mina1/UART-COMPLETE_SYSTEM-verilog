@@ -49,7 +49,7 @@ generate the TX clock form the Rx and divide by 8, the same thing for Alu clock 
 delay of 20% of the clock which is Uart clock as all inputs and outputs are interfacing with uart clock and we are going to add driving cells to simulate reeal pads 
 input transitions and add constraint of load to be 0.5 pf.<br />
 # formality post synthesis
--we are going to make formality to check functunality of the synthesiable circuit made to make sure that it was synthesised correctlly so the netlist and the rtl code <br />
+-we are going to make formality to check functunality of the synthesiable circuit made to make sure that it was synthesised correctlly so the netlist and the rtl code 
 should match
 # Dft
 -next we are going to insert dft scan chains with 3 scan chains and we are going to mux every reset input with scan_rst and every clock input with scan_clock <br /> 
