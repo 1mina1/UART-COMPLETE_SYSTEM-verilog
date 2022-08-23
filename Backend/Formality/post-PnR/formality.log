@@ -1,0 +1,49 @@
+****************************************************
+
+Info:  Net Ref:/WORK/SYSTEM_TOP_dft/SO[2] is undriven.
+Info:  Net Ref:/WORK/SYSTEM_TOP_dft/SO[1] is undriven.
+Info:  Net Ref:/WORK/SYSTEM_TOP_dft/SO[0] is undriven.
+Info:  Net Imp:/WORK/SYSTEM_TOP_dft/U0_ClkDiv.i_clk_en is undriven.
+Info:  Net Imp:/WORK/ALU_test_1/FE_UNCONNECTEDZ_0 is undriven.
+Info:  Net Imp:/WORK/ALU_test_1/FE_UNCONNECTEDZ_1 is undriven.
+Info:  Net Imp:/WORK/ALU_test_1/FE_UNCONNECTEDZ_2 is undriven.
+Info:  Net Imp:/WORK/ALU_test_1/FE_UNCONNECTEDZ_3 is undriven.
+Info:  Net Imp:/WORK/ALU_test_1/sub_46.CI is undriven.
+Info:  Net Imp:/WORK/ALU_test_1/add_45.CI is undriven.
+Info:  Net Imp:/WORK/ALU_test_1/mult_47.TC is undriven.
+Info:  Net Imp:/WORK/ALU_DW_div_uns_0/remainder[7] is undriven.
+Info:  Net Imp:/WORK/ALU_DW_div_uns_0/remainder[6] is undriven.
+Info:  Net Imp:/WORK/ALU_DW_div_uns_0/remainder[5] is undriven.
+Info:  Net Imp:/WORK/ALU_DW_div_uns_0/remainder[4] is undriven.
+Info:  Net Imp:/WORK/ALU_DW_div_uns_0/remainder[3] is undriven.
+Info:  Net Imp:/WORK/ALU_DW_div_uns_0/remainder[2] is undriven.
+Info:  Net Imp:/WORK/ALU_DW_div_uns_0/remainder[1] is undriven.
+Info:  Net Imp:/WORK/ALU_DW_div_uns_0/remainder[0] is undriven.
+Info:  Net Imp:/WORK/ALU_DW_div_uns_0/divide_by_0 is undriven.
+Info:  Net Imp:/WORK/ALU_DW01_sub_0/CO is undriven.
+Info:  Net Imp:/WORK/ALU_DW01_add_0/CO is undriven.
+Info:  Net Imp:/WORK/ALU_DW02_mult_0/FE_UNCONNECTEDZ_0 is undriven.
+Info:  Net Imp:/WORK/ALU_DW02_mult_0/FE_UNCONNECTEDZ_1 is undriven.
+Info:  Net Imp:/WORK/ALU_DW02_mult_0/FE_UNCONNECTEDZ_2 is undriven.
+Info:  Net Imp:/WORK/ALU_DW02_mult_0/FE_UNCONNECTEDZ_3 is undriven.
+Info:  Net Imp:/WORK/ALU_DW02_mult_0/FE_UNCONNECTEDZ_4 is undriven.
+Info:  Net Imp:/WORK/ALU_DW02_mult_0/FE_UNCONNECTEDZ_5 is undriven.
+Info:  Net Imp:/WORK/ALU_DW02_mult_0/FE_UNCONNECTEDZ_6 is undriven.
+Info:  Net Imp:/WORK/ALU_DW02_mult_0/FE_UNCONNECTEDZ_7 is undriven.
+Info:  Net Imp:/WORK/ALU_DW02_mult_0/FS_1.CI is undriven.
+Info:  Net Imp:/WORK/ALU_DW01_add_1/CO is undriven.
+Info:  Net Imp:/WORK/SYS_Controller_test_1/SYSCont_CLK_div_en is undriven.
+Info:  Net Imp:/WORK/TX_Controller_test_1/TXCont_CLK_Div_en is undriven.
+Info:  Net Imp:/WORK/Uart_TX_Top_test_1/U0_MUX.in_00 is undriven.
+Info:  Net Imp:/WORK/Uart_TX_Top_test_1/U0_MUX.in_01 is undriven.
+Info:  guide_uniquify 56 (Line: 459)  Cannot find object "U5_mux2X1/U1" in design 'SYSTEM_TOP_dft'.
+Info:  SVF Operation 56 (Line: 459) - uniquify.  Status: rejected
+Info:  guide_uniquify 56 (Line: 459)  Cannot find object "U4_mux2X1/U1" in design 'SYSTEM_TOP_dft'.
+Info:  guide_uniquify 56 (Line: 459)  Cannot find object "U2_mux2X1/U1" in design 'SYSTEM_TOP_dft'.
+Info:  guide_uniquify 56 (Line: 459)  Cannot find object "U1_mux2X1/U1" in design 'SYSTEM_TOP_dft'.
+Info:  guide_uniquify 56 (Line: 459)  Cannot find object "U0_mux2X1/U1" in design 'SYSTEM_TOP_dft'.
+Info:  guide_uniquify 64 (Line: 505)  Cannot find object "U0_ALU/dp_cluster_0/mult_47" in design 'SYSTEM_TOP_dft'.
+Info:  Pre-verification of Ref:/WORK/ALU/div_48 SUCCEEDED.
+Info:  Pre-verification of Ref:/WORK/ALU/mult_47 SUCCEEDED.
+****************************************************
+
