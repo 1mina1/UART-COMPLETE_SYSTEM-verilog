@@ -1,0 +1,84 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : SYSTEM_TOP_dft
+Version: K-2015.06
+Date   : Tue Aug 23 04:05:35 2022
+****************************************
+
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+SYSTEM_TOP_dft                         1.50e-02 8.27e-02 1.15e+07    0.109 100.0
+  U0_Uart_TX_Top (Uart_TX_Top_test_1)  3.94e-04 3.60e-03 5.51e+05 4.55e-03   4.2
+    U0_MUX (MUX)                       9.61e-05 1.41e-05 2.92e+04 1.39e-04   0.1
+    U0_Seralizer (Seralizer_test_1)    7.01e-06 6.33e-04 1.32e+05 7.72e-04   0.7
+      P0 (Parallel_To_Serial)          4.39e-06 2.76e-05 6.43e+04 9.63e-05   0.1
+      C0 (counter_test_1)              2.63e-06 6.06e-04 6.76e+04 6.76e-04   0.6
+    U0_FSM (FSM_test_1)                1.33e-05 6.36e-04 1.04e+05 7.54e-04   0.7
+    U0_Parity_Calc (Parity_Calc)       2.79e-09 4.38e-08 8.50e+04 8.50e-05   0.1
+    U0_InputBuffer (InputBuffer_test_1)
+                                       3.34e-05 2.29e-03 1.96e+05 2.52e-03   2.3
+  U0_UART_RX (UART_RX_test_1)          1.15e-03 7.13e-03 1.00e+06 9.28e-03   8.5
+    U0_Stop_Check (Stop_Check)            0.000    0.000 4.32e+03 4.32e-06   0.0
+    U0_Parity_Check (Parity_Check)     9.34e-06 4.58e-05 9.73e+04 1.52e-04   0.1
+    U0_Strt_Check (Strt_Check)         2.41e-07 4.11e-07 2.48e+03 3.13e-06   0.0
+    U0_Deseralizer (Deseralizer_test_1)
+                                       1.73e-04 2.50e-03 1.67e+05 2.84e-03   2.6
+    U0_Data_Sampler (Data_Sampler_test_1)
+                                       1.19e-04 9.29e-04 2.97e+05 1.34e-03   1.2
+    U0_edge_bit_counter (edge_bit_counter_test_1)
+                                       2.74e-04 2.41e-03 2.82e+05 2.97e-03   2.7
+    U0_RXFSM (RXFSM_test_1)            2.52e-04 1.21e-03 1.45e+05 1.61e-03   1.5
+  U0_SYS_Controller (SYS_Controller_test_1)
+                                       1.62e-03 1.17e-02 1.11e+06 1.44e-02  13.2
+    U0_TX_Controller (TX_Controller_test_1)
+                                       6.78e-04 5.92e-03 5.87e+05 7.19e-03   6.6
+    U0_RX_Controller (RX_Controller_test_1)
+                                       6.46e-04 5.69e-03 5.15e+05 6.86e-03   6.3
+  U0_ALU (ALU_test_1)                  3.58e-04 1.71e-02 4.28e+06 2.18e-02  19.9
+    mult_47 (ALU_DW02_mult_0)          1.75e-05 1.65e-05 1.66e+06 1.69e-03   1.5
+    add_45 (ALU_DW01_add_0)            2.29e-06 2.06e-05 2.05e+05 2.28e-04   0.2
+    sub_46 (ALU_DW01_sub_0)            3.26e-06 2.06e-05 2.48e+05 2.72e-04   0.2
+    div_48 (ALU_DW_div_uns_0)          3.31e-05 1.18e-04 1.24e+06 1.39e-03   1.3
+  U0_Register_File (Register_File_test_1)
+                                       2.67e-03 3.06e-02 3.63e+06 3.69e-02  33.8
+  U0_ClkDiv (ClkDiv_test_1)            3.12e-04 2.31e-03 3.16e+05 2.93e-03   2.7
+  U0_CLK_GATE (CLK_GATE)               1.84e-03 2.69e-03 3.73e+04 4.56e-03   4.2
+  U0_BIT_SYNC (BIT_SYNC_test_1)        8.08e-06 4.81e-04 2.78e+04 5.17e-04   0.5
+  U1_DATA_SYNC (DATA_SYNC_test_1)      1.13e-06 2.35e-03 2.10e+05 2.57e-03   2.3
+  U0_DATA_SYNC (DATA_SYNC_test_0)      8.03e-05 2.80e-03 2.14e+05 3.10e-03   2.8
+  U1_RST_SYNC (RST_SYNC_test_1)        6.65e-06 5.69e-04 2.89e+04 6.04e-04   0.6
+  U0_RST_SYNC (RST_SYNC_test_0)        7.80e-06 5.71e-04 2.89e+04 6.08e-04   0.6
+  U5_mux2X1 (mux2X1_5)                 9.76e-06 4.23e-05 1.29e+04 6.50e-05   0.1
+  U4_mux2X1 (mux2X1_1)                 9.76e-06 4.23e-05 1.29e+04 6.49e-05   0.1
+  U3_mux2X1 (mux2X1_0)                 5.81e-05 4.56e-05 1.15e+04 1.15e-04   0.1
+  U2_mux2X1 (mux2X1_3)                 6.09e-04 1.90e-04 1.15e+04 8.10e-04   0.7
+  U1_mux2X1 (mux2X1_4)                 6.67e-04 1.91e-04 1.15e+04 8.69e-04   0.8
+  U0_mux2X1 (mux2X1_2)                 4.29e-03 2.64e-04 1.14e+04 4.56e-03   4.2
+1
